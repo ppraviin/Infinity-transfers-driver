@@ -8,13 +8,14 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavHostController
 import com.infinitytransfers.driver.navigation.auth.AuthRoutes
+import org.koin.compose.viewmodel.koinViewModel
 
 @Composable
 fun SplashRoot(
     navHostController: NavHostController,
     backStackEntry: NavBackStackEntry
 ) {
-    val viewModel = viewModel<SplashViewModel>()
+    val viewModel = koinViewModel<SplashViewModel>()
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
 
     LaunchedEffect(true) {
