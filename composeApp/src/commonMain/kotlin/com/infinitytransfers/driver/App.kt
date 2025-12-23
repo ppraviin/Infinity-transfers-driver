@@ -14,6 +14,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
+import com.infinitytransfers.driver.core.theme.AppTheme
 import com.infinitytransfers.driver.navigation.MainNavGraph
 import com.infinitytransfers.driver.presentation.auth.splash.SplashRoot
 import com.infinitytransfers.driver.presentation.auth.splash.SplashScreen
@@ -24,10 +25,9 @@ import infinitytransfersdriver.composeapp.generated.resources.Res
 import infinitytransfersdriver.composeapp.generated.resources.compose_multiplatform
 
 @Composable
-@Preview
 fun App() {
     val navHostController = rememberNavController()
-    MaterialTheme {
+    AppTheme {
         MainNavGraph(navHostController)
     }
 }
