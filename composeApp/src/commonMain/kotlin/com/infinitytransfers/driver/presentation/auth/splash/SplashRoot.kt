@@ -5,9 +5,15 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavBackStackEntry
+import androidx.navigation.NavHostController
+import com.infinitytransfers.driver.navigation.auth.AuthRoutes
 
 @Composable
-fun SplashRoot() {
+fun SplashRoot(
+    navHostController: NavHostController,
+    backStackEntry: NavBackStackEntry
+) {
     val viewModel = viewModel<SplashViewModel>()
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
 
@@ -15,8 +21,10 @@ fun SplashRoot() {
         viewModel.actionFlow.collect { splashAction ->
             when(splashAction) {
                 SplashAction.NavigateToWelcome -> {
-
+                    navHostController.navigate(AuthRoutes.Welcome)
                 }
+
+                SplashAction.NavigateToHome -> TODO()
             }
         }
     }
