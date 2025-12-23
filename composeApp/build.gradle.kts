@@ -58,6 +58,9 @@ kotlin {
             implementation(libs.androidx.datastore)
             implementation(libs.androidx.datastore.preferences)
 
+            //country code picker
+            implementation(libs.country.picker.kmp)
+
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)

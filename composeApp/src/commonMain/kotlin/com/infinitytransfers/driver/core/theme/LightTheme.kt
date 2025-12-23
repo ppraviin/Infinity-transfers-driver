@@ -12,8 +12,8 @@ internal val LightTheme = lightColorScheme(
     background = AppColors.white,
     onBackground = AppColors.black,
 
-    surface = AppColors.white,
-    onSurface = AppColors.black,
+    surface = AppColors.greyCard,
+    onSurface = AppColors.descriptionText,
 
     surfaceVariant = AppColors.descriptionText,
     onSurfaceVariant = AppColors.white,

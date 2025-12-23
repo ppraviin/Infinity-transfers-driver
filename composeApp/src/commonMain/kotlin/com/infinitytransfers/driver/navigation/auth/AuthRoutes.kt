@@ -9,4 +9,7 @@ sealed class AuthRoutes: NavigationRoute {
 
     @Serializable
     data object Welcome: AuthRoutes()
+
+    @Serializable
+    data object Login: AuthRoutes()
 }

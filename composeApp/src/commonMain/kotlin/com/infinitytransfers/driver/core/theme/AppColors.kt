@@ -11,4 +11,6 @@ object AppColors {
 
     val error = Color(0xFFB00020)
 
+    val greyCard = Color(0xfff2f2f2)
+
 }

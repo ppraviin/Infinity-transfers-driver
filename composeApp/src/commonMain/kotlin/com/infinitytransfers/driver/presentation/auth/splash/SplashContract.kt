@@ -12,5 +12,6 @@ sealed class SplashEvent {
 sealed class SplashAction {
     data object NavigateToHome: SplashAction()
     data object NavigateToWelcome: SplashAction()
+    data object NavigateToLogin: SplashAction()
 }
 

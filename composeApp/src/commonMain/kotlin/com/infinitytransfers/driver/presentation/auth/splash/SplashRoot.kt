@@ -26,6 +26,9 @@ fun SplashRoot(
                 }
 
                 SplashAction.NavigateToHome -> TODO()
+                SplashAction.NavigateToLogin -> {
+                    navHostController.navigate(AuthRoutes.Login)
+                }
             }
         }
     }

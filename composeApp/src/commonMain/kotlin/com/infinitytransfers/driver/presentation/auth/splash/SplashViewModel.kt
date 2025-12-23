@@ -26,8 +26,8 @@ class SplashViewModel: ViewModel() {
 
     init {
         viewModelScope.launch {
-            delay(5000)
-            _actionFlow.emit(SplashAction.NavigateToWelcome)
+            delay(3000)
+            _actionFlow.emit(SplashAction.NavigateToLogin)
         }
     }
 
